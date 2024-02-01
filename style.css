@@ -1,0 +1,365 @@
+@font-face {
+    font-family: "italic" ;
+    src: url(Freigh\ Book-Italic.otf);
+}
+@font-face {
+    font-family: "regular" ;
+    src: url( Freight\ -Regular.otf);
+}
+@font-face {
+    font-family: "bold-regular" ;
+    src: url( Freight\ Bold-Regular.otf);
+}
+@font-face {
+    font-family: "semibold" ;
+    src: url( Semibold-Regular.otf);
+}
+@font-face {
+    font-family: "semibold-italic" ;
+    src: url(Semibold-Italic.otf);
+}
+@font-face {
+    font-family: "mediumr" ;
+    src: url(Medium-Regular.otf);
+}
+@font-face {
+    font-family: "mitalic" ;
+    src: url(Medium-Italic.otf);
+}
+@font-face {
+    font-family: "lightitalic" ;
+    src: url(Freigh\ Book-Italic.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "freight pro";
+}
+html, body{
+    height: 100%;
+    width: 100%; 
+}
+.main{
+    background: #000;
+}
+#loader{ 
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    color: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   z-index: 99; 
+     
+}
+#loader h1{
+    font-size: 6.6vw;
+    line-height: 5vw;
+    letter-spacing: -3px;
+    font-weight: 100; 
+    font-family: "regular";
+    position: relative;
+    z-index: 9;
+}
+ .yellow1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f5e41b;
+    z-index: 8;
+ }
+ .yellow2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f5e41b;
+    z-index: 8;
+ }
+
+#loader video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 7;
+}
+
+.nav{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 45px 85px 0 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav svg path{
+    fill: #000;
+}
+
+.navr{
+    position: relative;
+    display: flex; 
+}
+.navr p{
+    color: #302d2d;
+    font-size: 1.1vw;
+    margin-left: 3.5vw;
+    transition-delay: 0.7s;
+    transition: right 0.9s ease-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navr p:hover{
+     text-decoration: underline 1px solid black;
+}
+.plus{
+    position: relative;
+    margin-left: 3vw;
+    top:-35%;
+    rotate: 45deg;
+    font-size: 3.8vw;
+    text-decoration: none;
+    transition:  0.7s ease-in-out;
+     
+}
+.page1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #f5e41b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.page1 h1{
+    font-size: 6.6vw;
+    line-height: 5vw;
+    letter-spacing: -3px;
+    font-weight: 100; 
+    font-family: "regular";
+}
+.page1b {
+    position: absolute;
+    display: flex;
+    bottom: 40px;
+    width: 100%;  
+    justify-content: space-between;  
+}
+
+.page1b p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw; 
+    margin: 0 5vw; 
+}
+.page1b p:hover {
+    text-decoration: underline 1px solid rgb(41, 40, 40); 
+}
+
+.page2{
+    height: 100vh;
+    width: 100%;
+    background: #000;    
+    color: #fff;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center; 
+}
+.elem{ 
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.elem h2{
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+    line-height: 5vw;
+    font-style: normal;
+}
+
+.elem .moving{ 
+    width: 100%;
+    white-space: nowrap;
+    padding: 0.5vw 0;
+    background-color: #f5e41b;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) scaleY(0);
+    transition: all ease 0.4s;
+     
+    
+}
+.elem .blur{
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #f5e31bf7, #f5e31bfa);
+    box-shadow: 10px 0 20px  #f5e41b, -80px 0 20px #f5e41b;
+    z-index: 100;
+}
+.elem .moving .moving-in{
+    display: inline-block;
+    white-space: nowrap;
+    padding: 2px 0;
+    animation-name: moving;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.elem .moving .moving-in h5{ 
+    color: black;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    margin-right: 2.5rem;
+    transition: all ease 0.5s;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+@keyframes moving {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving{
+    transform: translate(0, -50%) scaleY(1);
+}
+.elem:hover .moving h5{
+     
+    opacity: 1;
+}
+.elem:hover h2{
+    color: #000;
+    font-style: italic;
+}
+
+
+
+
+
+
+ 
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+.image-cont{
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: rap;
+
+}
+.image-div{
+    height: 38vw;
+    width: 29.5vw;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 20px;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    transition: all ease 0.5s;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: #0000001f;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+.overlay p{
+    font-family: mitalic;
+    color: #fff;
+    font-size: 2.5vw; 
+    text-align: center;
+    line-height: 2vw;
+    transition: all ease 0.5s;
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+.image-div:hover .overlay{
+    background: #000;
+}
+.image-div:hover .overlay p{
+    opacity: 1;
+}
+.image-div:hover img{
+    scale: 1.1;
+}
+
+
+
+.footer{
+    height: 30vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 40px;
+}
+.foot{
+    height: 40%;
+    width: 100%;
+    background: #000;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    
+    
+}
+.footer h3{
+    font-size: 2vw;
+    cursor: pointer;
+}
+.foot p{
+    font-size: 1.3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.foot .left{
+    display: flex;
+    gap: 20px;
+}
+.foot p:hover{ 
+    text-decoration: underline;
+    transition: all ease-in 0.5s;
+}
